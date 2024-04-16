@@ -1,0 +1,55 @@
+.deleteBtn {
+    margin-right: 10px; 
+  }  
+  
+  .btn-custom {
+    transition: transform 0.2s ease;
+  }
+  
+  .btn-custom:hover {
+    transform: scale(1.05);
+  }
+  
+  .list-group-item {
+    background-color: #fff;
+    transition: background-color 1.5s ease, opacity 2s ease; 
+    animation: slideIn 0.5s forwards;
+    display: none;
+  }
+  
+  .list-group-item.complete {
+    animation: slideBackground 0.5s forwards;
+  }
+  
+  .list-group-item.deleted {
+    background-color: #e90808; 
+    opacity: 0; 
+    }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideBackground {
+    0% {
+      background-color: #fff; 
+      background-position: 0% 0%; 
+    }
+    100% {
+      background-color: #d4edda; 
+      background-position: 100% 0%; 
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
